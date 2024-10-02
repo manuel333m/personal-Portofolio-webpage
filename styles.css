@@ -90,8 +90,8 @@ body{
 
 
 .section__projects{
-  height: 200vh;
   background-color: var(--HEADER-HOVER-BLUE);
+  padding: 110px 0;
 }
 
 .section__projects h2{
@@ -104,7 +104,8 @@ body{
 
 .projects__div{
   margin-top: 2rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 2rem;
@@ -225,6 +226,11 @@ body{
   text-decoration: none;
 }
 
+.div__button a {
+text-decoration: none;
+color: white;
+font-style: normal;
+}
 
 @media(prefers-color-scheme: dark){
   :root{
