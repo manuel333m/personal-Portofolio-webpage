@@ -106,11 +106,12 @@ body{
 .projects__div{
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: 300px 300px 300px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   flex-direction: row;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
+  margin-left: 1rem;
 }
 
 .project-tile{
@@ -271,5 +272,23 @@ font-style: normal;
       --HEADER-HOVER-BLUE: rgb(26, 1, 26);
       --PROJECT-PBGCOLOR: rgb(37, 2, 2);
       --POPPING-RED: rgb(216, 224, 96);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .projects__div{
+width: 100%;
+margin: 0 auto;
+margin-left: 1rem;
+margin-right: 1rem;
+
+  }
+}
+@media screen and (max-width: 640px) {
+  .projects__div{
+display:flex;
+width: 100%;
+margin: 0 auto;
+margin-left: 1rem;
   }
 }
