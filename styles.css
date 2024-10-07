@@ -109,7 +109,9 @@ body{
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
-  margin-left: 2rem;
+  justify-items: center;
+  object-fit: cover;
+
 }
 
 .project-tile{
@@ -123,8 +125,8 @@ body{
   width: 100%;
   height: calc(100% - 6.25rem);
   display: block;
-  object-fit:fill;
-
+  object-fit: cover;
+  object-position: 0% 0%;
 
 }
 
@@ -275,18 +277,25 @@ font-style: normal;
 
 @media screen and (max-width: 800px) {
   .projects__div{
+display: grid;
+column-width: 200px;
 width: 100%;
 margin: 0 auto;
 margin-left: 1rem;
 margin-right: 1rem;
+grid-template-columns: repeat(2, 1fr);
 
   }
+  
 }
 @media screen and (max-width: 640px) {
   .projects__div{
-display:flex;
+display:grid;
+justify-content: center ;
 width: 100%;
 margin: 0 auto;
 margin-left: 1rem;
+grid-template-columns: 1fr;
+
   }
 }
