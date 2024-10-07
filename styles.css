@@ -173,7 +173,7 @@ body{
   
 }
 .learn:hover{
-  background:purple;
+  background:black;
   transition-duration: 1s;
 }
 .learn:hover > i {
