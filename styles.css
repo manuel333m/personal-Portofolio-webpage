@@ -129,25 +129,42 @@ body{
   object-position: 0% 0%;
 
 }
-
-.projects__p{
+.watch {
+  display: flex;
   background-color: var(--PROJECT-PBGCOLOR);
-  color: var(--FONT-COLOR);
+  color: var(--PROJECT-PBGCOLOR);
   text-align: center;
   padding: 1rem;
   position: relative;
   font-size: 1.2rem;
+  justify-content: center;
+  
+}
+
+.watch:hover {
+  color: orange;
+  transition-duration: 0.5s ;
+
+}
+.watch:not(:hover) {
+  transition-duration: 0.5s ;
+
+}
+
+.projects__p{
+  color: white;
+  padding: 0 0.5rem;
+
 }
 
 .projects__p:hover::after{
-  content: '/>';
   color: orange;
   position: absolute;
   right: 20px;
+  transition-duration: 5s;
 }
 
 .projects__p:hover::before{
-  content: '<';
   color: orange;
   position: absolute;
   left: 20px;
@@ -168,14 +185,21 @@ body{
   
 }
 .show-all a{
+
   text-decoration: none;
   color:white;
   cursor: pointer ;
-  
-  
 }
+.show-all:hover {
+background: rgb(59, 3, 3);
+transition-duration: 0.5s ;
+}
+.show-all:not(:hover) {
+transition-duration: 0.5s ;
+}
+
 .learn:hover{
-  background:black;
+
   transition-duration: 1s;
 }
 .learn:hover > i {
@@ -230,6 +254,11 @@ body{
   color: var(--FONT-COLOR);
   padding: 2rem;
   text-decoration: none;
+  gap: 20px;
+
+}
+.contact__links{
+  padding: 0 20px;
 }
 
 .contact__links a:hover{
